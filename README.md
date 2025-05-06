@@ -1,11 +1,4 @@
 
 Лабораторная №4, ПнаЯВУ, гр. 334701, Вар. №5.
 
-Добавлено
-Обработка ошибок: GlobalExceptionHandler.java (400 и 500).
-
-Логирование: LoggingAspect.java с AOP.
-
-Swagger: Зависимость и аннотации в WeatherRecordController.
-
-CheckStyle: Плагин и google_checks.xml.
+Реализована bulk-create операция для массового создания городов (saveAllCities), добавлены unit-тесты для сервиса CityService. Также реализован сервис кэширования (CacheManager) с поддержкой подсчёта и управления данными, включая массовое кэширование городов

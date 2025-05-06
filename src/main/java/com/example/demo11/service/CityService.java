@@ -63,8 +63,7 @@ public class CityService {
             throw new IllegalArgumentException("City name cannot be null or empty");
         }
         List<City> savedCities = cityRepository.saveAll(cities);
-        cacheManager.clearAllCitiesCache();
-        savedCities.forEach(city -> cacheManager.clearCityCache(city.getId()));
+        cacheManager.putCitiesBulk(savedCities); // Массовое кэширование вместо очистки
         return savedCities;
     }
 }
